@@ -1,0 +1,324 @@
+{
+  "model": {
+    "name": "all-MiniLM-L12-v2",
+    "path": "F:\\Programs\\paper\\models\\class_1\\all-MiniLM-L12-v2\\model\\sentence-transformers_all-MiniLM-L12-v2",
+    "description": "预训练的语言模型用于文本表示学习"
+  },
+  "datasets": {
+    "class1": [
+      {
+        "name": "FinanceBench",
+        "type": "FINANCE_BENCH",
+        "paths": {
+          "main": "F:\\Programs\\paper\\datasets\\class_1\\financebench\\financebench_merged.jsonl"
+        },
+        "description": "金融基准数据集，包含问题和证据文本",
+        "sample_size": 3000
+      },
+      {
+        "name": "FiQA",
+        "type": "FIQA",
+        "paths": {
+          "corpus": "F:\\Programs\\paper\\datasets\\class_1\\fiqa\\corpus.jsonl",
+          "queries": "F:\\Programs\\paper\\datasets\\class_1\\fiqa\\queries.jsonl",
+          "qrels": "F:\\Programs\\paper\\datasets\\class_1\\fiqa\\qrels\\dev.jsonl"
+        },
+        "description": "金融问答数据集",
+        "sample_size": 3000
+      },
+      {
+        "name": "FiQA-reranking",
+        "type": "FIQA_RERANKING",
+        "paths": {
+          "main": "F:\\Programs\\paper\\datasets\\class_1\\FiQA-reranking\\train.parquet"
+        },
+        "description": "FiQA重新排序数据集，包含查询、正例和负例",
+        "options": {
+          "query_field": "query",
+          "positive_field": "positive",
+          "negative_field": "negative"
+        },
+        "sample_size": 3000
+      },
+      {
+        "name": "DaloopaFinRetrieval",
+        "type": "DALOOPA_FINRETRIEVAL",
+        "paths": {
+          "main": "F:\\Programs\\paper\\datasets\\class_1\\daloopa_finretrieval"
+        },
+        "description": "Daloopa金融检索数据集，包含问题和回答",
+        "sample_size": 3000
+      },
+      {
+        "name": "LlamaFactory-FiQA",
+        "type": "LLAMAFACTORY_FIQA",
+        "paths": {
+          "main": "F:\\Programs\\paper\\datasets\\class_1\\llamafactory-fiqa\\llamafactory-fiqa.json"
+        },
+        "description": "LlamaFactory金融问答数据集",
+        "options": {
+          "input_field": "input",
+          "output_field": "output"
+        },
+        "sample_size": 3000
+      },
+      {
+        "name": "SEC-QA-Sorted-Chunks",
+        "type": "SEC_QA_SORTED_CHUNKS",
+        "paths": {
+          "main": "F:\\Programs\\paper\\datasets\\class_1\\SEC-QA-sorted-chunks\\SEC-QA-sorted-chunks.jsonl"
+        },
+        "description": "SEC问答排序块数据集",
+        "options": {
+          "question_field": "questions",
+          "answer_field": "answers"
+        },
+        "sample_size": 3000
+      },
+      {
+        "name": "FinCorpus",
+        "type": "FINCORPUS",
+        "paths": {
+          "main": "F:\\Programs\\paper\\datasets\\class_1\\FinCorpus\\fin_exam.jsonl"
+        },
+        "description": "金融语料库数据集，包含金融考试题目和答案",
+        "sample_size": 3000
+      },
+      {
+        "name": "TAT-QA",
+        "type": "TAT_QA",
+        "paths": {
+          "main": "F:\\Programs\\paper\\datasets\\class_1\\TAT-QA\\tatqa_dataset_train.json"
+        },
+        "description": "表格和文本问答数据集，包含表格、段落和问题",
+        "sample_size": 3000
+      },
+      {
+        "name": "FinInfoSearch-zh-01",
+        "type": "FIN_INFO_SEARCH_ZH",
+        "paths": {
+          "main": "F:\\Programs\\paper\\datasets\\class_1\\class1-finInfoSearch-zh-01\\train.csv"
+        },
+        "description": "中文金融信息检索数据集",
+        "options": {
+          "query_field": "query",
+          "doc_field": "doc_text",
+          "label_field": "label"
+        },
+        "sample_size": 3000
+      },
+      {
+        "name": "FinQA-zh-01",
+        "type": "FIN_QA_ZH",
+        "paths": {
+          "main": "F:\\Programs\\paper\\datasets\\class_1\\class1-FinQA-zh-01\\train.csv"
+        },
+        "description": "中文金融问答数据集",
+        "options": {
+          "question_field": "question",
+          "context_field": "context",
+          "answer_field": "answer"
+        },
+        "sample_size": 3000
+      }
+    ],
+    "class2": [
+      {
+        "name": "AFQMC_银行垂直业务问题匹配_2",
+        "path": "F:\\Programs\\paper\\datasets\\class_2\\AFQMC\\AFQMC_银行垂直业务问题匹配_2.parquet"
+      },
+      {
+        "name": "bq_corpus_通用金融客服场景_2",
+        "path": "F:\\Programs\\paper\\datasets\\class_2\\bq_corpus\\bq_corpus_通用金融客服场景_2.parquet"
+      },
+      {
+        "name": "FinMTEB_Final_财报_2",
+        "path": "F:\\Programs\\paper\\datasets\\class_2\\FinanceMTEB\\FinMTEB_Final_财报_2.parquet"
+      },
+      {
+        "name": "FinSTS_财报风险合规文本_2",
+        "path": "F:\\Programs\\paper\\datasets\\class_2\\FinSTS\\FinSTS_财报风险合规文本_2.parquet"
+      },
+      {
+        "name": "FinSTSb_dev_财报_2",
+        "path": "F:\\Programs\\paper\\datasets\\class_2\\FinSTSb\\syang687_finstsb_to_dev_财报_2.csv"
+      },
+      {
+        "name": "FinParaSTS_train",
+        "path": "F:\\Programs\\paper\\datasets\\class_2\\FinParaSTS\\data\\train-00000-of-00001.parquet"
+      },
+      {
+        "name": "ATEC",
+        "path": "F:\\Programs\\paper\\datasets\\class_2\\ATEC\\atec_nlp_sim_train_add.csv"
+      },
+      {
+        "name": "changesInRiskDescription-en-1",
+        "path": "F:\\Programs\\paper\\datasets\\class_2\\class2-changesInRiskDescription-en-01\\train.csv"
+      },
+      {
+        "name": "sts-en-1",
+        "path": "F:\\Programs\\paper\\datasets\\class_2\\class2-sts-en-1\\train.csv"
+      },
+            {
+        "name": "C-MTEB",
+        "path": "F:\\Programs\\paper\\datasets\\class_2\\C-MTEB\\train-00000-of-00001-987df3939be28d90.parquet"
+      },
+      {
+        "name": "STSB",
+        "path": "F:\\Programs\\paper\\datasets\\class_2\\STSB\\train-00000-of-00001-7d9f45e146afdbd0.parquet"
+      },
+      {
+        "name": "complianceTextComparison-zh-01",
+        "path": "F:\\Programs\\paper\\datasets\\class_2\\class2-complianceTextComparison-zh-01\\train.csv"
+      }
+    ],
+    "class3": [
+      {
+        "name": "AdaptLLM-FiQA-SA",
+        "type": "ADAPT_LLM_FIQA_SA",
+        "paths": {
+          "train": "F:\\Programs\\paper\\datasets\\class_3\\AdaptLLM-FiQA-SA\\train.csv"
+        },
+        "description": "金融情感分析数据集，无列名TSV格式",
+        "sample_size": 3000
+      },
+      {
+        "name": "nickmuchifinancial-text-combo-classification",
+        "type": "NICKMUCHI_FINANCIAL_TEXT",
+        "paths": {
+          "train": "F:\\Programs\\paper\\datasets\\class_3\\nickmuchifinancial-text-combo-classification\\train-00000-of-00001-9f768a47c45763c6.parquet"
+        },
+        "description": "金融文本综合分类数据集",
+        "sample_size": 3000
+      },
+      {
+        "name": "zeroshottwitter-financial-news-topic",
+        "type": "TWITTER_FINANCIAL_NEWS_TOPIC",
+        "paths": {
+          "train": "F:\\Programs\\paper\\datasets\\class_3\\zeroshottwitter-financial-news-topic\\topic_train.csv"
+        },
+        "description": "Twitter金融新闻主题分类数据集",
+        "sample_size": 3000
+      },
+      {
+        "name": "amitkediaFinancial-Fraud-Dataset",
+        "type": "FINANCIAL_FRAUD",
+        "paths": {
+          "train": "F:\\Programs\\paper\\datasets\\class_3\\amitkediaFinancial-Fraud-Dataset\\Final_Dataset.csv"
+        },
+        "description": "金融欺诈检测数据集，列名：Fillings, Fraud",
+        "sample_size": 3000
+      },
+      {
+        "name": "class3-complianceClassification-en-01",
+        "type": "COMPLIANCE_CLASSIFICATION",
+        "paths": {
+          "train": "F:\\Programs\\paper\\datasets\\class_3\\class3-complianceClassification-en-01\\任务3_合规分类_1-en.csv"
+        },
+        "description": "合规分类数据集，列名：text, label, compliance_type, severity",
+        "sample_size": 3000
+      },
+      {
+        "name": "class3-riskAnalysis-en-01",
+        "type": "RISK_IDENTIFICATION",
+        "paths": {
+          "train": "F:\\Programs\\paper\\datasets\\class_3\\class3-riskAnalysis-en-01\\任务3_风险识别_1-en.csv"
+        },
+        "description": "风险识别数据集，列名：text, label, risk_type, risk_level, industry",
+        "sample_size": 3000
+      },
+      {
+        "name": "class3-sentimentAnalysis-en-01",
+        "type": "SENTIMENT_ANALYSIS",
+        "paths": {
+          "train": "F:\\Programs\\paper\\datasets\\class_3\\class3-sentimentAnalysis-en-01\\任务3_情感分析_1_en.csv"
+        },
+        "description": "情感分析数据集，列名：text, label, sentiment_score",
+        "sample_size": 3000
+      },
+      {
+        "name": "CLNagisaFinancialSentimentAnalysis",
+        "type": "SENTIMENT_ANALYSIS",
+        "paths": {
+          "train": "F:\\Programs\\paper\\datasets\\class_3\\CLNagisaFinancialSentimentAnalysis\\data.csv"
+        },
+        "description": "金融情感分析数据集，列名：Sentence, Sentiment",
+        "sample_size": 3000
+      },
+      {
+        "name": "gretelaigretel-financial-risk-analysis-v1",
+        "type": "RISK_IDENTIFICATION",
+        "paths": {
+          "train": "F:\\Programs\\paper\\datasets\\class_3\\gretelaigretel-financial-risk-analysis-v1\\train-00000-of-00001.parquet"
+        },
+        "description": "金融风险分析数据集，列名：input, output (JSON格式)",
+        "sample_size": 3000
+      },
+      {
+        "name": "Naat97financial-risk-data",
+        "type": "RISK_IDENTIFICATION",
+        "paths": {
+          "train": "F:\\Programs\\paper\\datasets\\class_3\\Naat97financial-risk-data\\financial_risk_analysis_large.csv"
+        },
+        "description": "金融风险分析数据集，表格格式，最后一列为标签",
+        "sample_size": 3000,
+        "options": {
+          "text_columns": ["CreditScore", "AnnualIncome", "LoanAmount", "LoanDuration", "Age", "EmploymentStatus", "MaritalStatus"],
+          "label_column": "LoanApproved"
+        }
+      },
+      {
+        "name": "Chinese-Financial-News-Sentiment-Analysis",
+        "type": "SENTIMENT_ANALYSIS",
+        "paths": {
+          "train": "F:\\Programs\\paper\\datasets\\class_3\\Chinese-Financial-News-Sentiment-Analysis\\Train_Data.csv"
+        },
+        "description": "中文金融新闻情感分析数据集",
+        "options": {
+          "text_column": "text",
+          "label_column": "negative"
+        },
+        "sample_size": 3000
+      },
+      {
+        "name": "financial-news-sentiment",
+        "type": "SENTIMENT_ANALYSIS",
+        "paths": {
+          "train": "F:\\Programs\\paper\\datasets\\class_3\\financial-news-sentiment\\train2.csv"
+        },
+        "description": "金融新闻情感分析数据集",
+        "options": {
+          "text_column": "Title",
+          "label_column": "labels"
+        },
+        "sample_size": 3000
+      },
+      {
+        "name": "fiqa-2018",
+        "type": "SENTIMENT_ANALYSIS",
+        "paths": {
+          "train": "F:\\Programs\\paper\\datasets\\class_3\\fiqa-2018\\train.csv"
+        },
+        "description": "FiQA 2018情感分析数据集",
+        "options": {
+          "text_column": "sentence",
+          "label_column": "label"
+        },
+        "sample_size": 3000
+      },
+      {
+        "name": "twitter-financial-news-sentiment",
+        "type": "SENTIMENT_ANALYSIS",
+        "paths": {
+          "train": "F:\\Programs\\paper\\datasets\\class_3\\twitter-financial-news-sentiment\\sent_train.csv"
+        },
+        "description": "Twitter金融新闻情感分析数据集",
+        "options": {
+          "text_column": "text",
+          "label_column": "label"
+        },
+        "sample_size": 3000
+      }
+    ]
+  }
+}
